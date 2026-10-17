@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Unpack bundle
-        run: python3 salah_bundle.py
+        run: python3 "$(ls salah_bundle*.py | head -n 1)"
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
